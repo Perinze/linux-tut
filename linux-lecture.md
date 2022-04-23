@@ -53,48 +53,48 @@ Linux的特色与强项都在命令行. 相比与Windows的命令提示符或Pow
 
 不管是什么操作系统, 文件操作都是都是非常基本的操作.
 
-ls	- list			显示目录的文件内容
-cd	- change directory	改变当前目录
-mkdir	- make directory	新建目录
+> - ls	- list			显示目录的文件内容
+> - cd	- change directory	改变当前目录
+> - mkdir	- make directory	新建目录
 
 Linux的文件系统是组织成树状结构的.
 
 相对路径和绝对路径. 相对路径取决于当前所在路径.
 
-ls
-mkdir first-dir
-cd first-dir
-ls
-cd ..
-ls
+> ls
+> mkdir first-dir
+> cd first-dir
+> ls
+> cd ..
+> ls
 
 其他命令
 
-touch	- touch			新建或更新一个文件的时间戳
-cp	- copy			复制文件或目录
-mv	- move			移动文件或目录
-rm	- remove		删除文件或目录
-cat	- concatenate		显示文件内容
+> touch	- touch			新建或更新一个文件的时间戳
+> cp	- copy			复制文件或目录
+> mv	- move			移动文件或目录
+> rm	- remove		删除文件或目录
+> cat	- concatenate		显示文件内容
 
-cd first-dir
-touch first-file
-cp first-file second
-mv second second-file
-cp ../.bashrc ./bashrc
-cat bashrc
-rm bashrc
+> cd first-dir
+> touch first-file
+> cp first-file second
+> mv second second-file
+> cp ../.bashrc ./bashrc
+> cat bashrc
+> rm bashrc
 
 ### man
 
-cd first-dir
-mkdir another-dir
-rm another-dir
+> cd first-dir
+> mkdir another-dir
+> rm another-dir
 
 是否发现删不掉.
 
 这个时候我们可以去查询rm的手册, 通过man命令, 而且不需要联网.
 
-man rm
+> man rm
 
 man页面介绍.
 
@@ -106,7 +106,7 @@ man页面介绍.
 
 "q"退出.
 
-rm -r another-dir
+> rm -r another-dir
 
 成功.
 
@@ -119,17 +119,17 @@ man无疑是你的小帮手.
 
 包管理需要root权限, 所以需要前缀sudo.
 
-sudo apt-get install nano gcc
+> sudo apt-get install nano gcc
 
 输入"y"并回车.
 
 就开始了安装.
 
-man apt-get
+> man apt-get
 
 ### 在Linux中编写运行C程序
 
-nano hello.c
+> nano hello.c
 
 '''c
 #include <stdio.h>
@@ -142,9 +142,9 @@ int main() {
 
 ^X保存退出.
 
-ls
-gcc -o hello hello.c
-./hello
+> ls
+> gcc -o hello hello.c
+> ./hello
 
 你就成功地编译并运行了一个C程序.
 
@@ -152,7 +152,7 @@ gcc -o hello hello.c
 
 还可以通过脚本自动化这个过程.
 
-nano compile.sh
+> nano compile.sh
 
 '''bash
 #!/bin/bash
@@ -162,17 +162,17 @@ gcc -o $1 $1.cpp
 
 保存.
 
-chmod +x compile.sh
-rm hello
-ls
-./compile.sh hello
+> chmod +x compile.sh
+> rm hello
+> ls
+> ./compile.sh hello
 
 这个脚本就帮你完成了编译和运行.
 
 ### 尝试在你的Linux上运行一个web服务器
 
-sudo apt-get install nginx
-sudo systemctl start nginx
+> sudo apt-get install nginx
+> sudo systemctl start nginx
 
 然后在浏览器地址栏输入http://HOSTNAME
 
