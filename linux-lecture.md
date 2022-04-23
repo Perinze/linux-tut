@@ -53,27 +53,22 @@ Linux的特色与强项都在命令行. 相比与Windows的命令提示符或Pow
 
 不管是什么操作系统, 文件操作都是都是非常基本的操作.
 
-> - ls	- list			显示目录的文件内容
-
-> - cd	- change directory	改变当前目录
-
-> - mkdir	- make directory	新建目录
+- ls	- list			显示目录的文件内容
+- cd	- change directory	改变当前目录
+- mkdir	- make directory	新建目录
 
 Linux的文件系统是组织成树状结构的.
 
 相对路径和绝对路径. 相对路径取决于当前所在路径.
 
-> ls
-
-> mkdir first-dir
-
-> cd first-dir
-
-> ls
-
-> cd ..
-
-> ls
+```bash
+ls
+mkdir first-dir
+cd first-dir
+ls
+cd ..
+ls
+```
 
 其他命令
 
