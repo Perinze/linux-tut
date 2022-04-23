@@ -72,45 +72,39 @@ ls
 
 其他命令
 
-> touch	- touch			新建或更新一个文件的时间戳
-
-> cp	- copy			复制文件或目录
-
-> mv	- move			移动文件或目录
-
-> rm	- remove		删除文件或目录
-
-> cat	- concatenate		显示文件内容
+- touch	- touch			新建或更新一个文件的时间戳
+- cp	- copy			复制文件或目录
+- mv	- move			移动文件或目录
+- rm	- remove		删除文件或目录
+- cat	- concatenate		显示文件内容
 
 
 
-> cd first-dir
-
-> touch first-file
-
-> cp first-file second
-
-> mv second second-file
-
-> cp ../.bashrc ./bashrc
-
-> cat bashrc
-
-> rm bashrc
+```bash
+cd first-dir
+touch first-file
+cp first-file second
+mv second second-file
+cp ../.bashrc ./bashrc
+cat bashrc
+rm bashrc
+```
 
 ### man
 
-> cd first-dir
-
-> mkdir another-dir
-
-> rm another-dir
+```bash
+cd first-dir
+mkdir another-dir
+rm another-dir
+```
 
 是否发现删不掉.
 
 这个时候我们可以去查询rm的手册, 通过man命令, 而且不需要联网.
 
-> man rm
+```bash
+man rm
+```
 
 man页面介绍.
 
@@ -122,7 +116,9 @@ man页面介绍.
 
 "q"退出.
 
-> rm -r another-dir
+```bash
+rm -r another-dir
+```
 
 成功.
 
@@ -135,34 +131,38 @@ man无疑是你的小帮手.
 
 包管理需要root权限, 所以需要前缀sudo.
 
-> sudo apt-get install nano gcc
+sudo apt-get install nano gcc
 
 输入"y"并回车.
 
 就开始了安装.
 
-> man apt-get
+```bash
+man apt-get
+```
 
 ### 在Linux中编写运行C程序
 
-> nano hello.c
+```bash
+nano hello.c
+```
 
-'''c
+```c
 #include <stdio.h>
 
 int main() {
 	printf("hello linux\n");
 	return 0;
 }
-'''
+```
 
 ^X保存退出.
 
-> ls
-
-> gcc -o hello hello.c
-
-> ./hello
+```bash
+ls
+gcc -o hello hello.c
+./hello
+```
 
 你就成功地编译并运行了一个C程序.
 
@@ -170,31 +170,33 @@ int main() {
 
 还可以通过脚本自动化这个过程.
 
-> nano compile.sh
+```bash
+nano compile.sh
+```
 
-'''bash
+```bash
 #!/bin/bash
 gcc -o $1 $1.cpp
 ./$1
-'''
+```
 
 保存.
 
-> chmod +x compile.sh
-
-> rm hello
-
-> ls
-
-> ./compile.sh hello
+```bash
+chmod +x compile.sh
+rm hello
+ls
+./compile.sh hello
+```
 
 这个脚本就帮你完成了编译和运行.
 
 ### 尝试在你的Linux上运行一个web服务器
 
-> sudo apt-get install nginx
-
-> sudo systemctl start nginx
+```bash
+sudo apt-get install nginx
+sudo systemctl start nginx
+```
 
 然后在浏览器地址栏输入http://HOSTNAME
 
