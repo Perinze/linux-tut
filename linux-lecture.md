@@ -198,10 +198,10 @@ sudo apt-get install nginx
 sudo systemctl start nginx
 ```
 
-然后在浏览器地址栏输入http://HOSTNAME
+然后在浏览器地址栏输入http://\<hostname\>
 
 wsl就是http://localhost
 
 虚拟机就在里面开浏览器http://localhost
 
-云服务器还需要在控制台打开80端口的权限, 然后访问http://HOSTNAME
+云服务器还需要在控制台打开80端口的权限, 然后访问http://\<hostname\>
